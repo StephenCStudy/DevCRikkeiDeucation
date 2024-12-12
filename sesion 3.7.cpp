@@ -9,7 +9,13 @@ int main() {
 
     if (so >= 1000 && so <= 9999) {
         
-        while (so != 0) {
+        if (so != 0) {
+            tong += so % 10;
+            so /= 10;
+            tong += so % 10;
+            so /= 10;
+            tong += so % 10;
+            so /= 10;
             tong += so % 10;
             so /= 10;
         }
