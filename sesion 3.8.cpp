@@ -1,18 +1,24 @@
 #include <stdio.h>
 
 int main() {
-    int so;
+    int num;
 	int nghichDao = 0;
 
     printf("nhap mot so nguyen to co 4 chu so: ");
-    scanf("%d", &so);
+    scanf("%d", &num);
 
-    if (so >= 1000 && so <= 9999) {
+    if (num >= 1000 && num <= 9999) {
     	
-        while (so != 0) {
-            nghichDao = nghichDao * 10 + so % 10;
-            so /= 10;
-        }
+        
+            nghichDao = nghichDao * 10 + num % 10;
+            num /= 10;
+            nghichDao = nghichDao * 10 + num % 10;
+            num /= 10;
+            nghichDao = nghichDao * 10 + num % 10;
+            num /= 10;
+            nghichDao = nghichDao * 10 + num % 10;
+            num /= 10;
+        
 
         printf("so nghich dao la: %d\n", nghichDao);
     } else {
